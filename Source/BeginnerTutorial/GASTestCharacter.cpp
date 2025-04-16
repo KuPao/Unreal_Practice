@@ -139,17 +139,9 @@ void AGASTestCharacter::Look(const FInputActionValue& Value)
 void AGASTestCharacter::Slap()
 {
 	bPressedSlap = true;
-	SlapKeyHoldTime = 0.0f;
 }
 
 void AGASTestCharacter::StopSlaping()
 {
 	bPressedSlap = false;
-	ResetJumpState();
-}
-
-void AGASTestCharacter::ResetSlapState()
-{
-	bPressedSlap = false;
-	SlapKeyHoldTime = 0.0f;
 }

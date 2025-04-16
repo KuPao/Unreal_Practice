@@ -43,9 +43,6 @@ class BEGINNERTUTORIAL_API AGASTestCharacter : public ACharacter, public IAbilit
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Character, meta = (AllowPrivateAccess = "true"))
-	float SlapKeyHoldTime;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Character, meta = (AllowPrivateAccess = "true"))
 	uint8 bPressedSlap : 1;
 
@@ -80,8 +77,6 @@ protected:
 	/** Called for stop slap */
 	UFUNCTION(BlueprintCallable, Category = Character)
 	void StopSlaping();
-
-	void ResetSlapState();
 
 protected:
 	// APawn interface
